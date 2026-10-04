@@ -317,17 +317,6 @@
 		</area>
 	</namedItem>
 	<namedItem xsi:type="NamedItemCells">
-		<name>СуммаПоТоварам</name>
-		<area>
-			<type>Rectangle</type>
-			<beginRow>8</beginRow>
-			<endRow>8</endRow>
-			<beginColumn>2</beginColumn>
-			<endColumn>2</endColumn>
-			<columnsID>fdeabb72-9e99-4171-bb6f-be6487fea2a3</columnsID>
-		</area>
-	</namedItem>
-	<namedItem xsi:type="NamedItemCells">
 		<name>Товары</name>
 		<area>
 			<type>Rows</type>

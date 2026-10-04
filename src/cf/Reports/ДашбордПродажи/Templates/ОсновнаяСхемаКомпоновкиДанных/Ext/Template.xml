@@ -128,8 +128,8 @@
 					<dcscor:parameter>Период</dcscor:parameter>
 					<dcscor:value xsi:type="v8:StandardPeriod">
 						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
-						<v8:startDate>2023-05-01T00:00:00</v8:startDate>
-						<v8:endDate>2023-06-01T23:59:59</v8:endDate>
+						<v8:startDate>2022-12-01T00:00:00</v8:startDate>
+						<v8:endDate>2023-01-01T23:59:59</v8:endDate>
 					</dcscor:value>
 				</dcscor:item>
 			</dcsset:dataParameters>

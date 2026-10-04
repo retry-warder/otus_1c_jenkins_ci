@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
@@ -91,9 +91,52 @@
 							<v8:content>Локальные</v8:content>
 						</v8:item>
 					</ToolTip>
-					<HorizontalStretch>true</HorizontalStretch>
 					<ExtendedTooltip name="ЛокальныеРасширеннаяПодсказка" id="37"/>
 					<ChildItems>
+						<UsualGroup name="FCM" id="16">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>FCM</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>FCM</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="FCMРасширеннаяПодсказка" id="17"/>
+							<ChildItems>
+								<CheckBoxField name="ИспользоватьFCM" id="41">
+									<DataPath>Объект.ИспользоватьFCM</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Использовать FCM (для Android устройств)</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ИспользоватьFCMКонтекстноеМеню" id="42"/>
+									<ExtendedTooltip name="ИспользоватьFCMРасширеннаяПодсказка" id="43"/>
+								</CheckBoxField>
+								<InputField name="КлючОтправителя" id="7">
+									<DataPath>Объект.КлючCервераОтправителяFCM</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ключ отправителя</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="КлючОтправителяКонтекстноеМеню" id="8"/>
+									<ExtendedTooltip name="КлючОтправителяРасширеннаяПодсказка" id="9"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
 						<UsualGroup name="APNS" id="18">
 							<Title>
 								<v8:item>
@@ -107,11 +150,9 @@
 									<v8:content>APNS</v8:content>
 								</v8:item>
 							</ToolTip>
-							<HorizontalStretch>true</HorizontalStretch>
 							<Group>Vertical</Group>
 							<Behavior>Usual</Behavior>
 							<Representation>NormalSeparation</Representation>
-							<United>false</United>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="APNSРасширеннаяПодсказка" id="19"/>
 							<ChildItems>
@@ -120,7 +161,7 @@
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Apple Push Notification</v8:content>
+											<v8:content>Использовать APNs (для IOS устройств)</v8:content>
 										</v8:item>
 									</Title>
 									<CheckBoxType>Auto</CheckBoxType>
@@ -147,111 +188,6 @@
 								</UsualGroup>
 							</ChildItems>
 						</UsualGroup>
-						<UsualGroup name="FCM" id="16">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>FCM</v8:content>
-								</v8:item>
-							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>FCM</v8:content>
-								</v8:item>
-							</ToolTip>
-							<HorizontalStretch>true</HorizontalStretch>
-							<Group>Vertical</Group>
-							<Behavior>Usual</Behavior>
-							<Representation>NormalSeparation</Representation>
-							<United>false</United>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="FCMРасширеннаяПодсказка" id="17"/>
-							<ChildItems>
-								<CheckBoxField name="ИспользоватьFCM" id="41">
-									<DataPath>Объект.ИспользоватьFCM</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Firebase Cloud Messaging</v8:content>
-										</v8:item>
-									</Title>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="ИспользоватьFCMКонтекстноеМеню" id="42"/>
-									<ExtendedTooltip name="ИспользоватьFCMРасширеннаяПодсказка" id="43"/>
-								</CheckBoxField>
-								<InputField name="КлючОтправителя" id="7">
-									<DataPath>Объект.КлючCервераОтправителяFCM</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Ключ отправителя</v8:content>
-										</v8:item>
-									</Title>
-									<ContextMenu name="КлючОтправителяКонтекстноеМеню" id="8"/>
-									<ExtendedTooltip name="КлючОтправителяРасширеннаяПодсказка" id="9"/>
-								</InputField>
-							</ChildItems>
-						</UsualGroup>
-						<UsualGroup name="HPK" id="62">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>HPK</v8:content>
-								</v8:item>
-							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>HPK</v8:content>
-								</v8:item>
-							</ToolTip>
-							<HorizontalStretch>true</HorizontalStretch>
-							<Group>Vertical</Group>
-							<Behavior>Usual</Behavior>
-							<Representation>NormalSeparation</Representation>
-							<United>false</United>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="HPKРасширеннаяПодсказка" id="63"/>
-							<ChildItems>
-								<CheckBoxField name="ИспользоватьHPK" id="64">
-									<DataPath>Объект.ИспользоватьHPK</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Huawei Push Kit</v8:content>
-										</v8:item>
-									</Title>
-									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="ИспользоватьHPKКонтекстноеМеню" id="65"/>
-									<ExtendedTooltip name="ИспользоватьHPKРасширеннаяПодсказка" id="66"/>
-								</CheckBoxField>
-								<InputField name="ИдентификаторПриложенияHPK" id="70">
-									<DataPath>Объект.ИдентификаторПриложенияHPK</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Идентификатор приложения</v8:content>
-										</v8:item>
-									</Title>
-									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-									<ContextMenu name="ИдентификаторПриложенияHPKКонтекстноеМеню" id="71"/>
-									<ExtendedTooltip name="ИдентификаторПриложенияHPKРасширеннаяПодсказка" id="72"/>
-								</InputField>
-								<InputField name="КлючПриложенияHPK" id="67">
-									<DataPath>Объект.КлючПриложенияHPK</DataPath>
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Ключ приложения</v8:content>
-										</v8:item>
-									</Title>
-									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
-									<ContextMenu name="КлючПриложенияHPKКонтекстноеМеню" id="68"/>
-									<ExtendedTooltip name="КлючПриложенияHPKРасширеннаяПодсказка" id="69"/>
-								</InputField>
-							</ChildItems>
-						</UsualGroup>
 						<UsualGroup name="WNS" id="48">
 							<Title>
 								<v8:item>
@@ -265,11 +201,9 @@
 									<v8:content>WNS</v8:content>
 								</v8:item>
 							</ToolTip>
-							<HorizontalStretch>true</HorizontalStretch>
 							<Group>Vertical</Group>
 							<Behavior>Usual</Behavior>
 							<Representation>NormalSeparation</Representation>
-							<United>false</United>
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="WNSРасширеннаяПодсказка" id="49"/>
 							<ChildItems>
@@ -278,7 +212,7 @@
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Windows Push Notification</v8:content>
+											<v8:content>Использовать WNS (для Windows устройств)</v8:content>
 										</v8:item>
 									</Title>
 									<CheckBoxType>Auto</CheckBoxType>
@@ -362,15 +296,12 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<UseAlways>
-				<Field>Объект.ИдентификаторПриложенияHPK</Field>
 				<Field>Объект.ИдентификаторПриложенияWNS</Field>
 				<Field>Объект.ИспользоватьAPNS</Field>
 				<Field>Объект.ИспользоватьFCM</Field>
-				<Field>Объект.ИспользоватьHPK</Field>
 				<Field>Объект.ИспользоватьPushУведомления</Field>
 				<Field>Объект.ИспользоватьWNS</Field>
 				<Field>Объект.КлючCервераОтправителяFCM</Field>
-				<Field>Объект.КлючПриложенияHPK</Field>
 				<Field>Объект.КлючПриложенияWNS</Field>
 				<Field>Объект.ЛогинСервисаПередачиPushУведомлений</Field>
 			</UseAlways>

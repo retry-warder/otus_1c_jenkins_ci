@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
 	<Configuration uuid="a3a9949e-f1f0-4b3a-821f-a85a9fb2fb3c">
 		<InternalInfo>
 			<xr:ContainedObject>
@@ -41,7 +41,7 @@
 			</Synonym>
 			<Comment> </Comment>
 			<NamePrefix/>
-			<ConfigurationExtensionCompatibilityMode>Version8_3_25</ConfigurationExtensionCompatibilityMode>
+			<ConfigurationExtensionCompatibilityMode>Version8_3_27</ConfigurationExtensionCompatibilityMode>
 			<DefaultRunMode>ManagedApplication</DefaultRunMode>
 			<UsePurposes>
 				<v8:Value xsi:type="app:ApplicationUsePurpose">PlatformApplication</v8:Value>
@@ -49,7 +49,7 @@
 			<ScriptVariant>Russian</ScriptVariant>
 			<DefaultRoles/>
 			<Vendor>Фирма "1С"</Vendor>
-			<Version>1.0.39.2</Version>
+			<Version>1.0.37.2</Version>
 			<UpdateCatalogAddress/>
 			<IncludeHelpInContents>true</IncludeHelpInContents>
 			<UseManagedFormInOrdinaryApplication>false</UseManagedFormInOrdinaryApplication>
@@ -216,7 +216,7 @@
 				</app:functionality>
 				<app:functionality>
 					<app:functionality>IncomingShareRequests</app:functionality>
-					<app:use>true</app:use>
+					<app:use>false</app:use>
 				</app:functionality>
 				<app:functionality>
 					<app:functionality>AllIncomingShareRequestsTypesProcessing</app:functionality>
@@ -283,15 +283,7 @@
 			</UsedMobileApplicationFunctionalities>
 			<StandaloneConfigurationRestrictionRoles/>
 			<MobileApplicationURLs/>
-			<AllowedIncomingShareRequestTypes>
-				<v8:Value xsi:type="app:AllowedIncomingShareRequestType">
-					<app:mime>image/*</app:mime>
-					<app:uti>public.image</app:uti>
-					<app:ext/>
-					<app:processingVariant xsi:type="xs:decimal">1</app:processingVariant>
-					<app:isCustom>false</app:isCustom>
-				</v8:Value>
-			</AllowedIncomingShareRequestTypes>
+			<AllowedIncomingShareRequestTypes/>
 			<MainClientApplicationWindowMode>Normal</MainClientApplicationWindowMode>
 			<DefaultInterface/>
 			<DefaultStyle/>
@@ -311,7 +303,7 @@
 			<Copyright>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Copyright © ООО "1C-Софт", 2023</v8:content>
+					<v8:content>Copyright © ООО "1C-Софт", 2020</v8:content>
 				</v8:item>
 			</Copyright>
 			<VendorInformationAddress>
@@ -332,7 +324,7 @@
 			<SynchronousPlatformExtensionAndAddInCallUseMode>DontUse</SynchronousPlatformExtensionAndAddInCallUseMode>
 			<InterfaceCompatibilityMode>Taxi</InterfaceCompatibilityMode>
 			<DatabaseTablespacesUseMode>DontUse</DatabaseTablespacesUseMode>
-			<CompatibilityMode>Version8_3_25</CompatibilityMode>
+			<CompatibilityMode>Version8_3_23</CompatibilityMode>
 			<DefaultConstantsForm>CommonForm.ОбщиеНастройки</DefaultConstantsForm>
 		</Properties>
 		<ChildObjects>
@@ -367,7 +359,6 @@
 			<CommonPicture>ПланировщикПеренестиНаСледующийДень</CommonPicture>
 			<CommonPicture>Контрагент</CommonPicture>
 			<CommonPicture>NFC</CommonPicture>
-			<CommonPicture>Копировать</CommonPicture>
 			<SessionParameter>ТекущийПользователь</SessionParameter>
 			<SessionParameter>ЯщикIMAP</SessionParameter>
 			<Role>Администратор</Role>
@@ -403,8 +394,6 @@
 			<CommonModule>СистемаВзаимодействияКлиент</CommonModule>
 			<CommonModule>УведомленияКлиент</CommonModule>
 			<CommonModule>УведомленияСервер</CommonModule>
-			<CommonModule>ВходящийЗапросПоделитьсяКлиент</CommonModule>
-			<CommonModule>API_ОписанияТоваров</CommonModule>
 			<ExchangePlan>Мобильные</ExchangePlan>
 			<XDTOPackage>ОбменСМобильнымУстройством</XDTOPackage>
 			<WebService>MAExchange</WebService>
@@ -433,37 +422,33 @@
 			<CommonCommand>ОстаткиТоваровНаСкладахКоманда</CommonCommand>
 			<CommandGroup>Информация</CommandGroup>
 			<CommandGroup>Печать</CommandGroup>
-			<Constant>SSLIMAP</Constant>
+			<Constant>ВыборПровайдераГеопозиционирования</Constant>
 			<Constant>SSLPOP3</Constant>
 			<Constant>SSLSMTP</Constant>
 			<Constant>АдресIMAPСервера</Constant>
 			<Constant>АдресPOP3Сервера</Constant>
 			<Constant>АдресSMTPСервера</Constant>
 			<Constant>ВалютаУчета</Constant>
-			<Constant>ВоспроизводитьТекстУведомления</Constant>
-			<Constant>ВыборПровайдераГеопозиционирования</Constant>
-			<Constant>ИдентификаторПриложенияHPK</Constant>
+			<Constant>SSLIMAP</Constant>
+			<Constant>ИмяПровайдера</Constant>
 			<Constant>ИдентификаторПриложенияWNS</Constant>
 			<Constant>ИмяОтправителяПочтовогоСообщения</Constant>
-			<Constant>ИмяПровайдера</Constant>
+			<Constant>ТолькоБесплатные</Constant>
 			<Constant>ИспользоватьAPNS</Constant>
 			<Constant>ИспользоватьFCM</Constant>
-			<Constant>ИспользоватьHPK</Constant>
 			<Constant>ИспользоватьIMAP</Constant>
 			<Constant>ИспользоватьPushУведомления</Constant>
 			<Constant>ИспользоватьWNS</Constant>
-			<Constant>ИспользоватьСетьПередачиДанных</Constant>
 			<Constant>ИспользоватьСотовуюСеть</Constant>
+			<Constant>ИспользоватьСетьПередачиДанных</Constant>
 			<Constant>ИспользоватьСпутники</Constant>
 			<Constant>КлючCервераОтправителяFCM</Constant>
-			<Constant>КлючПриложенияHPK</Constant>
 			<Constant>КлючПриложенияWNS</Constant>
 			<Constant>КодНовогоУзлаПланаОбмена</Constant>
 			<Constant>ЛогинСервисаПередачиPushУведомлений</Constant>
-			<Constant>МаркерДоступаHPK</Constant>
 			<Constant>МаркерДоступаWNS</Constant>
-			<Constant>ОтметкаНаФотоснимкеДата</Constant>
-			<Constant>ОтметкаНаФотоснимкеТекст</Constant>
+			<Constant>УчетПоСкладам</Constant>
+			<Constant>ВоспроизводитьТекстУведомления</Constant>
 			<Constant>ПарольIMAP</Constant>
 			<Constant>ПарольPOP3</Constant>
 			<Constant>ПарольSMTP</Constant>
@@ -477,11 +462,11 @@
 			<Constant>РаботаСТорговымОборудованием</Constant>
 			<Constant>СертификатМобильногоПриложенияIOS</Constant>
 			<Constant>ТаймаутИнтернетПочты</Constant>
-			<Constant>ТолькоБесплатные</Constant>
+			<Constant>ОтметкаНаФотоснимкеДата</Constant>
 			<Constant>ТолькоЗащищеннаяАутентификацияIMAP</Constant>
 			<Constant>ТолькоЗащищеннаяАутентификацияPOP3</Constant>
 			<Constant>ТолькоЗащищеннаяАутентификацияSMTP</Constant>
-			<Constant>УчетПоСкладам</Constant>
+			<Constant>ОтметкаНаФотоснимкеТекст</Constant>
 			<CommonForm>ОбщиеНастройки</CommonForm>
 			<CommonForm>НастройкиМобильногоУстройства</CommonForm>
 			<CommonForm>НастройкаПочты</CommonForm>
