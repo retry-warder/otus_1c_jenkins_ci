@@ -1,0 +1,36 @@
+{
+    "globals":  {
+                    "storage-user":  "DeployGit",
+                    "storage-pwd":  "",
+                    "git-path":  "git",
+                    "domain-email":  "example.com",
+                    "lic-try-count":  5,
+                    "plugins":  {
+                                    "enable":  [
+                                                   "check-authors",
+                                                   "sync-remote",
+                                                   "increment"
+                                               ]
+                                },
+                    "plugins-config":  {
+                                           "push-n-commits":  0,
+                                           "push-tags":  true,
+                                           "skip-exists-tags":  false,
+                                           "rename-module":  true,
+                                           "rename-form":  true,
+                                           "push":  true
+                                       }
+                },
+    "repositories":  [
+                         {
+                             "name":  "main",
+                             "path":  "D:/Otus_1c_projects/Base1c/StorageOtus",
+                             "dir":  "./src/cf",
+                             "temp-dir":  "",
+                             "v8version":  "8.3.27.2130",
+                             "plugins-config":  {
+                                                    "URL":  "https://github.com/retry-warder/otus_1c_jenkins_ci.git"
+                                                }
+                         }
+                     ]
+}

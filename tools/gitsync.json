@@ -1,0 +1,19 @@
+{
+    "$schema":  "https://raw.githubusercontent.com/Kyrales/vanessa-usher_mod/refs/heads/my_dev/resources/schema.json",
+    "agent":  "gitsync",
+    "v8Version":  "8.3.27.2130",
+    "defaultInfobase":  {
+                            "connectionString":  "/FD:/Otus_1c_projects/Base1c/Demo83_otus_clear",
+                            "auth":  ""
+                        },
+    "stages":  {
+                   "gitsync":  true
+               },
+    "gitsync":  {
+                    "timeout":  60,
+                    "configPath":  "./tools/gitsync_conf.json",
+                    "auth":  "",
+                    "useTemporaryInfobase":  false,
+                    "tempPath":  ""
+                }
+}
