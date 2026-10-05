@@ -382,6 +382,12 @@
 			<ContextMenu name="АвторКонтекстноеМеню" id="97"/>
 			<ExtendedTooltip name="АвторРасширеннаяПодсказка" id="98"/>
 		</LabelField>
+		<InputField name="Комментарий" id="120">
+			<DataPath>Объект.Комментарий</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="121"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="122"/>
+		</InputField>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
