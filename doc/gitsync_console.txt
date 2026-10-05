@@ -1,0 +1,174 @@
+  Started by user EAD
+  Obtained Jenkinsfile_gitsync from git https://github.com/retry-warder/otus_1c_jenkins_ci.git
+  Loading library usher2@my_dev
+  Attempting to resolve my_dev from remote references...
+   > git.exe --version # timeout=10
+   > git --version # 'git version 2.53.0.windows.2'
+   > git.exe ls-remote -h -- https://github.com/Kyrales/vanessa-usher_mod.git # timeout=10
+  Found match: refs/heads/my_dev revision 9ed052e34d964f1fb9b94af50e1327c5e437eabf
+  The recommended git tool is: NONE
+  No credentials specified
+   > git.exe rev-parse --resolve-git-dir C:\ProgramData\Jenkins\.jenkins\workspace\gitsync@libs\bfdc0ef05a6b2f91c51113dc2388059f8b9d148da7faee3b71b9ea3a6343d168\.git # timeout=10
+  Fetching changes from the remote Git repository
+   > git.exe config remote.origin.url https://github.com/Kyrales/vanessa-usher_mod.git # timeout=10
+  Fetching without tags
+  Fetching upstream changes from https://github.com/Kyrales/vanessa-usher_mod.git
+   > git.exe --version # timeout=10
+   > git --version # 'git version 2.53.0.windows.2'
+   > git.exe fetch --no-tags --force --progress -- https://github.com/Kyrales/vanessa-usher_mod.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+  Checking out Revision 9ed052e34d964f1fb9b94af50e1327c5e437eabf (my_dev)
+   > git.exe config core.sparsecheckout # timeout=10
+   > git.exe checkout -f 9ed052e34d964f1fb9b94af50e1327c5e437eabf # timeout=10
+  Commit message: "Корректировка параметров вывода epf"
+   > git.exe rev-list --no-walk 9ed052e34d964f1fb9b94af50e1327c5e437eabf # timeout=10
+  [Pipeline] Start of Pipeline
+  [Pipeline] echo
+  [INFO] Чтение конфигурационного файла
+  [Pipeline] node
+  Running on Jenkins in C:\ProgramData\Jenkins\.jenkins\workspace\gitsync
+  [Pipeline] {
+  [Pipeline] checkout
+  The recommended git tool is: git.exe
+  No credentials specified
+   > git.exe rev-parse --resolve-git-dir C:\ProgramData\Jenkins\.jenkins\workspace\gitsync\.git # timeout=10
+  Fetching changes from the remote Git repository
+   > git.exe config remote.origin.url https://github.com/retry-warder/otus_1c_jenkins_ci.git # timeout=10
+  Cleaning workspace
+   > git.exe rev-parse --verify HEAD # timeout=10
+  Resetting working tree
+   > git.exe reset --hard # timeout=10
+   > git.exe clean -fdx # timeout=10
+  Fetching upstream changes from https://github.com/retry-warder/otus_1c_jenkins_ci.git
+   > git.exe --version # timeout=10
+   > git --version # 'git version 2.53.0.windows.2'
+   > git.exe fetch --tags --force --progress -- https://github.com/retry-warder/otus_1c_jenkins_ci.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+   > git.exe rev-parse "refs/remotes/origin/storage_1c^{commit}" # timeout=10
+  Checking out Revision 7f6abf010c780f791581f1d311e974df5f6d5a8d (refs/remotes/origin/storage_1c)
+   > git.exe config core.sparsecheckout # timeout=10
+   > git.exe checkout -f 7f6abf010c780f791581f1d311e974df5f6d5a8d # timeout=10
+   > git.exe branch -a -v --no-abbrev # timeout=10
+   > git.exe branch -D storage_1c # timeout=10
+   > git.exe checkout -b storage_1c 7f6abf010c780f791581f1d311e974df5f6d5a8d # timeout=10
+  Commit message: "Удалён тест ОМ_API_ОписанияТоваров"
+   > git.exe rev-list --no-walk 6dcd6065ad7e76ec58dd4a2874654ebd77460d64 # timeout=10
+  Cleaning workspace
+   > git.exe rev-parse --verify HEAD # timeout=10
+  Resetting working tree
+   > git.exe reset --hard # timeout=10
+   > git.exe clean -fdx # timeout=10
+  [Pipeline] fileExists
+  [Pipeline] readFile
+  [Pipeline] }
+  [Pipeline] // node
+  [Pipeline] node
+  Running on Jenkins in C:\ProgramData\Jenkins\.jenkins\workspace\gitsync
+  [Pipeline] {
+  [Pipeline] stage
+  [Pipeline] { (Declarative: Checkout SCM)
+  [Pipeline] checkout
+  The recommended git tool is: git.exe
+  No credentials specified
+   > git.exe rev-parse --resolve-git-dir C:\ProgramData\Jenkins\.jenkins\workspace\gitsync\.git # timeout=10
+  Fetching changes from the remote Git repository
+   > git.exe config remote.origin.url https://github.com/retry-warder/otus_1c_jenkins_ci.git # timeout=10
+  Cleaning workspace
+   > git.exe rev-parse --verify HEAD # timeout=10
+  Resetting working tree
+   > git.exe reset --hard # timeout=10
+   > git.exe clean -fdx # timeout=10
+  Fetching upstream changes from https://github.com/retry-warder/otus_1c_jenkins_ci.git
+   > git.exe --version # timeout=10
+   > git --version # 'git version 2.53.0.windows.2'
+   > git.exe fetch --tags --force --progress -- https://github.com/retry-warder/otus_1c_jenkins_ci.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+   > git.exe rev-parse "refs/remotes/origin/storage_1c^{commit}" # timeout=10
+  Checking out Revision 7f6abf010c780f791581f1d311e974df5f6d5a8d (refs/remotes/origin/storage_1c)
+   > git.exe config core.sparsecheckout # timeout=10
+   > git.exe checkout -f 7f6abf010c780f791581f1d311e974df5f6d5a8d # timeout=10
+   > git.exe branch -a -v --no-abbrev # timeout=10
+   > git.exe branch -D storage_1c # timeout=10
+   > git.exe checkout -b storage_1c 7f6abf010c780f791581f1d311e974df5f6d5a8d # timeout=10
+  Commit message: "Удалён тест ОМ_API_ОписанияТоваров"
+  Cleaning workspace
+   > git.exe rev-parse --verify HEAD # timeout=10
+  Resetting working tree
+   > git.exe reset --hard # timeout=10
+   > git.exe clean -fdx # timeout=10
+  [Pipeline] }
+  [Pipeline] // stage
+  [Pipeline] withEnv
+  [Pipeline] {
+  [Pipeline] timestamps
+  [Pipeline] {
+  [Pipeline] stage
+  [Pipeline] { (Prepare)
+  [Pipeline] script
+  [Pipeline] {
+  [Pipeline] }
+  [Pipeline] // script
+  [Pipeline] }
+  [Pipeline] // stage
+  [Pipeline] stage
+  [Pipeline] { (Gitsync)
+  [Pipeline] timeout
+14:29:55  Timeout set to expire in 1 час 40 минут
+  [Pipeline] {
+  [Pipeline] script
+  [Pipeline] {
+  [Pipeline] isUnix
+  Did you forget the `def` keyword? cmdRun seems to be setting a field named toRun (to a value of type String) which could lead to memory leaks or other issues.
+  [Pipeline] bat
+14:29:55  
+14:29:55  C:\ProgramData\Jenkins\.jenkins\workspace\gitsync>chcp 65001 
+14:29:55  Active code page: 65001
+14:29:55  
+14:29:55  C:\ProgramData\Jenkins\.jenkins\workspace\gitsync>gitsync  --v8version 8.3.27.2130 --ibconnection /FD:/Otus_1c_projects/Base1c/Demo83_otus_clear all  ./tools/gitsync_conf.json 
+14:29:56  ИНФОРМАЦИЯ - Начало выполнение команды <all>
+14:29:56  ИНФОРМАЦИЯ - Начата пакетная синхронизация с <1> репозиториями
+14:29:56  ИНФОРМАЦИЯ - =================================
+14:29:56  ИНФОРМАЦИЯ - Начало синхронизации с хранилищем
+14:29:56  ИНФОРМАЦИЯ - Наименование: <main>
+14:29:56  ИНФОРМАЦИЯ - Путь к хранилищу: <D:/Otus_1c_projects/Base1c/StorageOtus>
+14:29:56  ИНФОРМАЦИЯ - Путь к рабочей копии: <./src/cf>
+14:29:57  ИНФОРМАЦИЯ - Номер синхронизированной версии: 1
+14:29:57  ИНФОРМАЦИЯ - Номер последней версии в хранилище: 2
+14:29:57  ИНФОРМАЦИЯ - Начата синхронизация с git
+14:29:58  ИНФОРМАЦИЯ - Номер синхронизированной версии: 1
+14:29:58  ИНФОРМАЦИЯ - Номер последней версии в хранилище: 2
+14:29:58  ИНФОРМАЦИЯ - Получаем исходники для версии 2, 05.10.2026 14:29:57
+14:30:02  ИНФОРМАЦИЯ - Определяю тип возможной выгрузки конфигурации в файлы
+14:30:02  ИНФОРМАЦИЯ - Тип выгрузки конфигурации в файлы: ПОЛНАЯ ВЫГРУЗКА
+14:30:08  ИНФОРМАЦИЯ - Отправляю изменения на удаленный url (push)
+14:30:13  ИНФОРМАЦИЯ - Завершена синхронизации с git
+14:30:13  ИНФОРМАЦИЯ - Завершена синхронизации с хранилищем
+14:30:13  ИНФОРМАЦИЯ - Наименование: <main>
+14:30:13  ИНФОРМАЦИЯ - Путь к хранилищу: <D:/Otus_1c_projects/Base1c/StorageOtus>
+14:30:13  ИНФОРМАЦИЯ - Путь к рабочей копии: <./src/cf>
+14:30:13  ИНФОРМАЦИЯ - =================================
+14:30:13  ИНФОРМАЦИЯ - Завершено выполнение команды <all>
+  [Pipeline] }
+  [Pipeline] // script
+  [Pipeline] }
+  [Pipeline] // timeout
+  [Pipeline] }
+  [Pipeline] // stage
+  [Pipeline] stage
+  [Pipeline] { (Declarative: Post Actions)
+  [Pipeline] node
+14:30:13  Running on Jenkins in C:\ProgramData\Jenkins\.jenkins\workspace\gitsync@2
+  [Pipeline] {
+  [Pipeline] script
+  [Pipeline] {
+  [Pipeline] }
+  [Pipeline] // script
+  [Pipeline] }
+  [Pipeline] // node
+  [Pipeline] }
+  [Pipeline] // stage
+  [Pipeline] }
+  [Pipeline] // timestamps
+  [Pipeline] }
+  [Pipeline] // withEnv
+  [Pipeline] }
+  [Pipeline] // node
+  [Pipeline] End of Pipeline
+  Finished: SUCCESS

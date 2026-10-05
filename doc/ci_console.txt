@@ -1,0 +1,752 @@
+  Branch indexing
+   > git.exe rev-parse --resolve-git-dir C:\ProgramData\Jenkins\.jenkins\caches\git-da27406bad77972156f353cbc639bbc3\.git # timeout=10
+  Setting origin to https://github.com/retry-warder/otus_1c_jenkins_ci.git
+   > git.exe config remote.origin.url https://github.com/retry-warder/otus_1c_jenkins_ci.git # timeout=10
+  Fetching origin...
+  Fetching upstream changes from origin
+   > git.exe --version # timeout=10
+   > git --version # 'git version 2.53.0.windows.2'
+   > git.exe config --get remote.origin.url # timeout=10
+   > git.exe fetch --no-tags --force --progress -- origin +refs/heads/*:refs/remotes/origin/* # timeout=10
+  Seen branch in repository origin/storage_1c
+  Seen 1 remote branch
+  Obtained Jenkinsfile_lib from cae1a1bda591bdb548f25a69b4a18e73090a9681
+  Loading library jenkins-lib@otus
+  Attempting to resolve otus from remote references...
+   > git.exe --version # timeout=10
+   > git --version # 'git version 2.53.0.windows.2'
+   > git.exe ls-remote -h -- https://github.com/Kyrales/jenkins-lib.git # timeout=10
+  Found match: refs/heads/otus revision bda4d4d5a5c955f656778c72681962f3e5289206
+  The recommended git tool is: NONE
+  No credentials specified
+   > git.exe rev-parse --resolve-git-dir C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c@libs\633f3c218d748b4ee3501cd9314876c4b314b431eaa9859ae19285bbbaab3baa\.git # timeout=10
+  Fetching changes from the remote Git repository
+   > git.exe config remote.origin.url https://github.com/Kyrales/jenkins-lib.git # timeout=10
+  Fetching without tags
+  Fetching upstream changes from https://github.com/Kyrales/jenkins-lib.git
+   > git.exe --version # timeout=10
+   > git --version # 'git version 2.53.0.windows.2'
+   > git.exe fetch --no-tags --force --progress -- https://github.com/Kyrales/jenkins-lib.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+  Checking out Revision bda4d4d5a5c955f656778c72681962f3e5289206 (otus)
+   > git.exe config core.sparsecheckout # timeout=10
+   > git.exe checkout -f bda4d4d5a5c955f656778c72681962f3e5289206 # timeout=10
+  Commit message: "Обновлен gitignore"
+   > git.exe rev-list --no-walk bda4d4d5a5c955f656778c72681962f3e5289206 # timeout=10
+  [Pipeline] Start of Pipeline
+  [Pipeline] timestamps
+  [Pipeline] {
+  [Pipeline] stage
+  [Pipeline] { (pre-stage)
+  [Pipeline] timeout
+14:31:23  Timeout set to expire in 1 час 0 минут
+  [Pipeline] {
+  [Pipeline] node
+14:31:23  Running on Jenkins in C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c
+  [Pipeline] {
+  [Pipeline] checkout
+14:31:23  The recommended git tool is: git.exe
+14:31:23  No credentials specified
+14:31:23   > git.exe rev-parse --resolve-git-dir C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c\.git # timeout=10
+14:31:23  Fetching changes from the remote Git repository
+14:31:23   > git.exe config remote.origin.url https://github.com/retry-warder/otus_1c_jenkins_ci.git # timeout=10
+14:31:23  Fetching without tags
+14:31:23  Fetching upstream changes from https://github.com/retry-warder/otus_1c_jenkins_ci.git
+14:31:23   > git.exe --version # timeout=10
+14:31:23   > git --version # 'git version 2.53.0.windows.2'
+14:31:23   > git.exe fetch --no-tags --force --progress -- https://github.com/retry-warder/otus_1c_jenkins_ci.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+14:31:25  Checking out Revision cae1a1bda591bdb548f25a69b4a18e73090a9681 (storage_1c)
+14:31:25   > git.exe config core.sparsecheckout # timeout=10
+14:31:25   > git.exe checkout -f cae1a1bda591bdb548f25a69b4a18e73090a9681 # timeout=10
+14:31:25  Commit message: "#TASK_1 #HW_OTUS_CI"
+14:31:25   > git.exe rev-list --no-walk 7f6abf010c780f791581f1d311e974df5f6d5a8d # timeout=10
+14:31:25  Cleaning workspace
+14:31:25   > git.exe rev-parse --verify HEAD # timeout=10
+14:31:25  Resetting working tree
+14:31:25   > git.exe reset --hard # timeout=10
+14:31:25   > git.exe clean -fdx # timeout=10
+  [Pipeline] withEnv
+  [Pipeline] {
+  [Pipeline] script
+  [Pipeline] {
+  [Pipeline] echo
+14:31:26  Debug overrides: resolved profile key = ci
+  [Pipeline] configFileProvider
+14:31:26  provisioning config files...
+14:31:26  not able to provide the file [ManagedFile: id=jenkins-debug-overrides-control, targetLocation=null, variable=DEBUG_OVERRIDES_CONTROL_FILE], can't be resolved by any provider - maybe it got deleted by an administrator?
+  [Pipeline] // configFileProvider
+  [Pipeline] echo
+14:31:26  Debug overrides: control file is unavailable, skip
+  [Pipeline] fileExists
+  [Pipeline] readFile
+  [Pipeline] libraryResource
+  [Pipeline] }
+  [Pipeline] // script
+  [Pipeline] }
+  [Pipeline] // withEnv
+  [Pipeline] }
+  [Pipeline] // node
+  [Pipeline] }
+  [Pipeline] // timeout
+  [Pipeline] }
+  [Pipeline] // stage
+  [Pipeline] stage
+  [Pipeline] { (Подготовка)
+  [Pipeline] parallel
+  [Pipeline] { (Branch: Подготовка 1С базы)
+  [Pipeline] { (Branch: Трансформация в формат EDT)
+  [Pipeline] stage
+  [Pipeline] { (Подготовка 1С базы)
+  [Pipeline] stage
+  [Pipeline] { (Трансформация в формат EDT)
+  Stage "Трансформация в формат EDT" skipped due to when conditional
+  [Pipeline] getContext
+  [Pipeline] }
+  [Pipeline] // stage
+  [Pipeline] }
+  [Pipeline] stage
+  [Pipeline] { (Трансформация из формата EDT)
+  Stage "Трансформация из формата EDT" skipped due to when conditional
+  [Pipeline] getContext
+  [Pipeline] }
+  [Pipeline] // stage
+  [Pipeline] stage
+  [Pipeline] { (Подготовка ИБ)
+  [Pipeline] node
+14:31:26  Running on Jenkins in C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c
+  [Pipeline] {
+  [Pipeline] checkout
+14:31:26  The recommended git tool is: git.exe
+14:31:26  No credentials specified
+14:31:26   > git.exe rev-parse --resolve-git-dir C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c\.git # timeout=10
+14:31:26  Fetching changes from the remote Git repository
+14:31:26   > git.exe config remote.origin.url https://github.com/retry-warder/otus_1c_jenkins_ci.git # timeout=10
+14:31:26  Fetching without tags
+14:31:26  Fetching upstream changes from https://github.com/retry-warder/otus_1c_jenkins_ci.git
+14:31:26   > git.exe --version # timeout=10
+14:31:26   > git --version # 'git version 2.53.0.windows.2'
+14:31:26   > git.exe fetch --no-tags --force --progress -- https://github.com/retry-warder/otus_1c_jenkins_ci.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+14:31:28  Checking out Revision cae1a1bda591bdb548f25a69b4a18e73090a9681 (storage_1c)
+14:31:28   > git.exe config core.sparsecheckout # timeout=10
+14:31:28   > git.exe checkout -f cae1a1bda591bdb548f25a69b4a18e73090a9681 # timeout=10
+14:31:28  Commit message: "#TASK_1 #HW_OTUS_CI"
+14:31:28  Cleaning workspace
+14:31:28   > git.exe rev-parse --verify HEAD # timeout=10
+14:31:28  Resetting working tree
+14:31:28   > git.exe reset --hard # timeout=10
+14:31:28   > git.exe clean -fdx # timeout=10
+  [Pipeline] withEnv
+  [Pipeline] {
+  [Pipeline] stage
+  [Pipeline] { (Сборка расширений из исходников)
+  [Pipeline] unstash
+  [Pipeline] echo
+14:31:28  Debug overrides: downstream stash is absent, skip restore
+  [Pipeline] timeout
+14:31:28  Timeout set to expire in 1 час 0 минут
+  [Pipeline] {
+  [Pipeline] isUnix
+  [Pipeline] bat
+  [Pipeline] echo
+14:31:29  Running on node built-in
+  [Pipeline] fileExists
+  [Pipeline] isUnix
+  [Pipeline] fileExists
+  [Pipeline] echo
+14:31:29  Сборка расширений
+  [Pipeline] echo
+14:31:29  Сборка расширения YAXUNIT из исходников
+  [Pipeline] withEnv
+  [Pipeline] {
+  [Pipeline] withEnv
+  [Pipeline] {
+  [Pipeline] isUnix
+  [Pipeline] bat
+14:31:29  
+14:31:29  C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c>chcp 65001   1>nul 
+14:31:29  
+14:31:29  C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c>vrunner.bat compileexttocfe --src C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c/./src/cfe/yaxunit --out build/out/cfe/YAXUNIT.cfe 
+14:31:30  vanessa-runner v2.6.1
+14:31:30  ИНФОРМАЦИЯ - Используется версия платформы 8.3.27.2130
+14:31:30  ИНФОРМАЦИЯ - Запускаем сборку расширения из исходников в файл cfe...
+14:31:30  ИНФОРМАЦИЯ - Создание информационной базы ("File="D:\Otus_1c_projects\tools\Temp\ommtsuoom1d.tmp";Locale = "ru_RU";") успешно завершено
+14:31:30  
+14:31:30  ИНФОРМАЦИЯ - Выполняю сборку/загрузку расширения 78e3c96100f14b04903656e875721003 из каталога C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c\src\cfe\yaxunit
+14:31:33  ИНФОРМАЦИЯ - Сборка/загрузка расширения 78e3c96100f14b04903656e875721003 завершена
+14:31:34  ИНФОРМАЦИЯ - Список расширений конфигурации:
+14:31:34  78e3c96100f14b04903656e875721003
+14:31:34  
+14:31:34  ИНФОРМАЦИЯ - Запускаю выгрузку расширения в файл
+14:31:35  ИНФОРМАЦИЯ - Сохранение конфигурации успешно завершено
+14:31:35  
+14:31:35  ИНФОРМАЦИЯ - Выгрузка в файл завершена.
+14:31:35  ИНФОРМАЦИЯ - Сборка расширения из исходников в файл cfe завершена.
+  [Pipeline] }
+  [Pipeline] // withEnv
+  [Pipeline] }
+  [Pipeline] // withEnv
+  [Pipeline] stash
+14:31:35  Stashed 1 file(s)
+  [Pipeline] }
+  [Pipeline] // timeout
+  [Pipeline] }
+  [Pipeline] // stage
+  [Pipeline] stage
+  [Pipeline] { (Создание ИБ)
+  [Pipeline] timeout
+14:31:35  Timeout set to expire in 1 час 0 минут
+  [Pipeline] {
+  [Pipeline] isUnix
+  [Pipeline] bat
+  [Pipeline] echo
+14:31:35  Running on node built-in
+  [Pipeline] fileExists
+  [Pipeline] }
+  [Pipeline] // timeout
+  [Pipeline] }
+  [Pipeline] // stage
+  [Pipeline] stage
+  [Pipeline] { (Загрузка конфигурации)
+  [Pipeline] timeout
+14:31:36  Timeout set to expire in 1 час 0 минут
+  [Pipeline] {
+  [Pipeline] script
+  [Pipeline] {
+  [Pipeline] echo
+14:31:36  Running on node built-in
+  [Pipeline] fileExists
+  [Pipeline] readFile
+  [Pipeline] withCredentials
+14:31:36  Masking supported pattern matches of %RUNNER_STORAGE_PWD% or %RUNNER_STORAGE_NAME%
+  [Pipeline] {
+  [Pipeline] echo
+14:31:36  Выполнение загрузки конфигурации из хранилища
+  [Pipeline] isUnix
+  [Pipeline] fileExists
+  [Pipeline] fileExists
+  [Pipeline] withEnv
+  [Pipeline] {
+  [Pipeline] isUnix
+  [Pipeline] bat
+14:31:36  
+14:31:36  C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c>chcp 65001   1>nul 
+14:31:36  
+14:31:36  C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c>vrunner.bat update-dev --storage --storage-ver 2 --ibconnection "/F./build/ib" --settings ./tools/vrunner.json 
+14:31:37  vanessa-runner v2.6.1
+14:31:37  ИНФОРМАЦИЯ - Используется версия платформы 8.3.27.2130
+14:31:37  ИНФОРМАЦИЯ - Обновляем из хранилища
+14:31:37  ИНФОРМАЦИЯ - Выполняю обновление конфигурации из хранилища
+14:31:38  ИНФОРМАЦИЯ - Обновление конфигурации из хранилища успешно завершено
+14:31:38  
+14:31:38  ИНФОРМАЦИЯ - Обновление конфигурации из хранилища завершено
+14:31:38  ИНФОРМАЦИЯ - Запускаю обновление конфигурации БД
+14:31:39  ИНФОРМАЦИЯ - Обновление конфигурации базы данных
+14:31:39  Обработка структуры базы данных...
+14:31:39  
+14:31:39  Сбор служебной информации...
+14:31:39  
+14:31:39  Создана таблица: Информационная база копий базы данных
+14:31:39  Изменена структура таблиц базы данных
+14:31:39  Создана таблица: Cтатистика текущего обновления копий базы данных
+14:31:39  Создана таблица: Cтатистика начального обновления копий базы данных
+14:31:39  Объект изменен: Документ.Заказ
+14:31:39  Принятие изменений...
+14:31:39  
+14:31:39  Обновление конфигурации базы данных успешно завершено
+14:31:39  
+14:31:39  ИНФОРМАЦИЯ - Обновление конфигурации БД завершено.
+  [Pipeline] }
+  [Pipeline] // withEnv
+  [Pipeline] }
+  [Pipeline] // withCredentials
+  [Pipeline] }
+  [Pipeline] // script
+  [Pipeline] }
+  [Pipeline] // timeout
+  [Pipeline] }
+  [Pipeline] // stage
+  [Pipeline] stage
+  [Pipeline] { (Загрузка расширений в конфигурацию)
+  [Pipeline] timeout
+14:31:39  Timeout set to expire in 1 час 0 минут
+  [Pipeline] {
+  [Pipeline] echo
+14:31:39  Running on node built-in
+  [Pipeline] isUnix
+  [Pipeline] fileExists
+  [Pipeline] }
+  [Pipeline] // timeout
+  [Pipeline] }
+  [Pipeline] // stage
+  [Pipeline] stage
+  [Pipeline] { (Инициализация ИБ)
+  [Pipeline] timeout
+14:31:39  Timeout set to expire in 1 час 0 минут
+  [Pipeline] {
+  [Pipeline] script
+  [Pipeline] {
+  [Pipeline] echo
+14:31:39  Running on node built-in
+  [Pipeline] isUnix
+  [Pipeline] bat
+  [Pipeline] echo
+14:31:40  Очистка каталога Allure: C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c\build\out\allure
+  [Pipeline] dir
+14:31:40  Running in C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c\build\out\allure
+  [Pipeline] {
+  [Pipeline] deleteDir
+  [Pipeline] }
+  [Pipeline] // dir
+  [Pipeline] echo
+14:31:40  Очистка каталога Cucumber: C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c\build\out\cucumber
+  [Pipeline] dir
+14:31:40  Running in C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c\build\out\cucumber
+  [Pipeline] {
+  [Pipeline] deleteDir
+  [Pipeline] }
+  [Pipeline] // dir
+  [Pipeline] withEnv
+  [Pipeline] {
+  [Pipeline] isUnix
+  [Pipeline] fileExists
+  [Pipeline] fileExists
+  [Pipeline] echo
+14:31:40  Запуск миграции ИБ
+  [Pipeline] isUnix
+  [Pipeline] fileExists
+  [Pipeline] echo
+14:31:40  Определение БСП по общему модулю src/cf/CommonModules/ОбновлениеИнформационнойБазыБСП/Ext/Module.bsl: не БСП
+  [Pipeline] echo
+14:31:40  Конфигурация не на БСП, запуск миграции ИБ без контроля build/migration-exit-status.log
+  [Pipeline] catchError
+  [Pipeline] {
+  [Pipeline] withEnv
+  [Pipeline] {
+  [Pipeline] isUnix
+  [Pipeline] bat
+14:31:40  
+14:31:40  C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c>chcp 65001   1>nul 
+14:31:40  
+14:31:40  C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c>vrunner.bat run --command "ЗапуститьОбновлениеИнформационнойБазы;ЗавершитьРаботуСистемы;" --execute $runnerRoot/epf/ЗакрытьПредприятие.epf --ibconnection "/F./build/ib" --settings ./tools/vrunner.json 
+14:31:41  vanessa-runner v2.6.1
+14:31:41  ИНФОРМАЦИЯ - Используется версия платформы 8.3.27.2130
+14:31:41  ИНФОРМАЦИЯ - Выполняю команду/действие в режиме 1С:Предприятие
+14:31:43  ИНФОРМАЦИЯ - Выполнение команды/действия в режиме 1С:Предприятие завершено.
+  [Pipeline] }
+  [Pipeline] // withEnv
+  [Pipeline] }
+  [Pipeline] // catchError
+  [Pipeline] findFiles
+  [Pipeline] echo
+14:31:43  Инициализация ИБ завершилась успешно
+  [Pipeline] echo
+14:31:43  Статусы команд инициализации ИБ:
+14:31:43  vrunner.bat run --command "ЗапуститьОбновлениеИнформационнойБазы;ЗавершитьРаботуСистемы;" --execute $runnerRoot/epf/ЗакрытьПредприятие.epf --ibconnection "/F./build/ib" --settings ./tools/vrunner.json: status 0
+  [Pipeline] }
+  [Pipeline] // withEnv
+  [Pipeline] stash
+14:31:43  Stashed 0 file(s)
+  [Pipeline] stash
+14:31:43  Stashed 0 file(s)
+  [Pipeline] }
+  [Pipeline] // script
+  [Pipeline] }
+  [Pipeline] // timeout
+  [Pipeline] }
+  [Pipeline] // stage
+  [Pipeline] stage
+  [Pipeline] { (Архивация ИБ)
+  [Pipeline] timeout
+14:31:44  Timeout set to expire in 1 час 0 минут
+  [Pipeline] {
+  [Pipeline] echo
+14:31:44  Running on node built-in
+  [Pipeline] echo
+14:31:44  Running on node built-in
+  [Pipeline] fileExists
+  [Pipeline] zip
+14:31:44  Compress C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c\build\ib filtered by [1Cv8.1CD] - [null] to C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c\1Cv8.1CD.zip
+14:31:45  Compressed 1 entries.
+  [Pipeline] stash
+14:31:46  Stashed 1 file(s)
+  [Pipeline] }
+  [Pipeline] // timeout
+  [Pipeline] }
+  [Pipeline] // stage
+  [Pipeline] }
+  [Pipeline] // withEnv
+  [Pipeline] }
+  [Pipeline] // node
+  [Pipeline] }
+  [Pipeline] // stage
+  [Pipeline] }
+  [Pipeline] // stage
+  [Pipeline] }
+  [Pipeline] // parallel
+  [Pipeline] }
+  [Pipeline] // stage
+  [Pipeline] stage
+  [Pipeline] { (Проверка качества)
+  [Pipeline] parallel
+  [Pipeline] { (Branch: EDT контроль)
+  [Pipeline] { (Branch: BDD сценарии)
+  [Pipeline] { (Branch: Синтаксический контроль)
+  [Pipeline] { (Branch: Дымовые тесты)
+  [Pipeline] { (Branch: YAXUnit тесты)
+  [Pipeline] stage
+  [Pipeline] { (EDT контроль)
+  [Pipeline] stage
+  [Pipeline] { (BDD сценарии)
+  [Pipeline] stage
+  [Pipeline] { (Синтаксический контроль)
+  [Pipeline] stage
+  [Pipeline] { (Дымовые тесты)
+  [Pipeline] stage
+  [Pipeline] { (YAXUnit тесты)
+  Stage "EDT контроль" skipped due to when conditional
+  [Pipeline] getContext
+  Stage "BDD сценарии" skipped due to when conditional
+  [Pipeline] getContext
+  Stage "Дымовые тесты" skipped due to when conditional
+  [Pipeline] getContext
+  [Pipeline] stage
+  [Pipeline] { (Валидация EDT)
+  [Pipeline] stage
+  [Pipeline] { (Распаковка ИБ)
+  [Pipeline] node
+14:31:46  Running on Jenkins in C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c
+  [Pipeline] stage
+  [Pipeline] { (Распаковка ИБ)
+  [Pipeline] node
+14:31:46  Running on Jenkins in C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c@2
+  Stage "EDT контроль" skipped due to when conditional
+  [Pipeline] getContext
+  [Pipeline] }
+  Stage "BDD сценарии" skipped due to when conditional
+  [Pipeline] getContext
+  [Pipeline] }
+  Stage "Дымовые тесты" skipped due to when conditional
+  [Pipeline] getContext
+  [Pipeline] }
+  [Pipeline] // stage
+  [Pipeline] // stage
+  [Pipeline] // stage
+  [Pipeline] {
+  [Pipeline] {
+  [Pipeline] stage
+  [Pipeline] { (Трансформация результатов)
+  [Pipeline] stage
+  [Pipeline] { (Загрузка расширений в конфигурацию)
+  [Pipeline] stage
+  [Pipeline] { (Загрузка расширений в конфигурацию)
+  [Pipeline] checkout
+14:31:46  The recommended git tool is: git.exe
+14:31:46  No credentials specified
+14:31:46   > git.exe rev-parse --resolve-git-dir C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c\.git # timeout=10
+  [Pipeline] checkout
+  Stage "EDT контроль" skipped due to when conditional
+14:31:46  The recommended git tool is: git.exe
+14:31:46  No credentials specified
+14:31:46   > git.exe rev-parse --resolve-git-dir C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c@2\.git # timeout=10
+  [Pipeline] getContext
+  [Pipeline] }
+  Stage "BDD сценарии" skipped due to when conditional
+  [Pipeline] getContext
+  [Pipeline] }
+  Stage "Дымовые тесты" skipped due to when conditional
+  [Pipeline] getContext
+14:31:46  Fetching changes from the remote Git repository
+14:31:46   > git.exe config remote.origin.url https://github.com/retry-warder/otus_1c_jenkins_ci.git # timeout=10
+  [Pipeline] }
+14:31:46  Fetching changes from the remote Git repository
+14:31:46   > git.exe config remote.origin.url https://github.com/retry-warder/otus_1c_jenkins_ci.git # timeout=10
+  [Pipeline] // stage
+14:31:46  Fetching without tags
+14:31:46  Fetching upstream changes from https://github.com/retry-warder/otus_1c_jenkins_ci.git
+14:31:46   > git.exe --version # timeout=10
+  [Pipeline] // stage
+14:31:46  Fetching without tags
+14:31:46  Fetching upstream changes from https://github.com/retry-warder/otus_1c_jenkins_ci.git
+14:31:46   > git.exe --version # timeout=10
+  [Pipeline] // stage
+  [Pipeline] }
+14:31:46   > git --version # 'git version 2.53.0.windows.2'
+14:31:46   > git.exe fetch --no-tags --force --progress -- https://github.com/retry-warder/otus_1c_jenkins_ci.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+  [Pipeline] stage
+  [Pipeline] { (Выполнение BDD сценариев)
+14:31:46   > git --version # 'git version 2.53.0.windows.2'
+14:31:46   > git.exe fetch --no-tags --force --progress -- https://github.com/retry-warder/otus_1c_jenkins_ci.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+  [Pipeline] stage
+  [Pipeline] { (Выполнение дымовых тестов)
+  [Pipeline] // stage
+  [Pipeline] }
+  Stage "BDD сценарии" skipped due to when conditional
+  [Pipeline] getContext
+  [Pipeline] }
+  Stage "Дымовые тесты" skipped due to when conditional
+  [Pipeline] getContext
+  [Pipeline] }
+  [Pipeline] // stage
+  [Pipeline] // stage
+  [Pipeline] }
+  [Pipeline] // stage
+  [Pipeline] }
+  [Pipeline] stage
+  [Pipeline] { (Архивация ИБ)
+  Stage "BDD сценарии" skipped due to when conditional
+  [Pipeline] getContext
+  [Pipeline] }
+  [Pipeline] // stage
+  [Pipeline] }
+  [Pipeline] // stage
+  [Pipeline] }
+14:31:48  Checking out Revision cae1a1bda591bdb548f25a69b4a18e73090a9681 (storage_1c)
+14:31:48   > git.exe config core.sparsecheckout # timeout=10
+14:31:48   > git.exe checkout -f cae1a1bda591bdb548f25a69b4a18e73090a9681 # timeout=10
+14:31:48  Commit message: "#TASK_1 #HW_OTUS_CI"
+14:31:48  Cleaning workspace
+14:31:48   > git.exe rev-parse --verify HEAD # timeout=10
+14:31:48  Resetting working tree
+14:31:48   > git.exe reset --hard # timeout=10
+14:31:48   > git.exe clean -fdx # timeout=10
+14:31:48  Checking out Revision cae1a1bda591bdb548f25a69b4a18e73090a9681 (storage_1c)
+14:31:48   > git.exe config core.sparsecheckout # timeout=10
+  [Pipeline] withEnv
+  [Pipeline] {
+14:31:48   > git.exe checkout -f cae1a1bda591bdb548f25a69b4a18e73090a9681 # timeout=10
+  [Pipeline] stage
+  [Pipeline] { (Распаковка ИБ)
+  [Pipeline] unstash
+  [Pipeline] echo
+14:31:48  Debug overrides: downstream stash is absent, skip restore
+14:31:48  Commit message: "#TASK_1 #HW_OTUS_CI"
+14:31:48  Cleaning workspace
+14:31:48   > git.exe rev-parse --verify HEAD # timeout=10
+  [Pipeline] unstash
+14:31:48  Resetting working tree
+14:31:48   > git.exe reset --hard # timeout=10
+  [Pipeline] unzip
+14:31:48  Extracting from C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c\1Cv8.1CD.zip
+14:31:48  Extracting: 1Cv8.1CD -> C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c\build\ib\1Cv8.1CD
+14:31:48   > git.exe clean -fdx # timeout=10
+  [Pipeline] withEnv
+  [Pipeline] {
+  [Pipeline] stage
+  [Pipeline] { (Распаковка ИБ)
+  [Pipeline] unstash
+  [Pipeline] echo
+14:31:48  Debug overrides: downstream stash is absent, skip restore
+  [Pipeline] unstash
+  [Pipeline] unzip
+14:31:48  Extracting from C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c@2\1Cv8.1CD.zip
+14:31:48  Extracting: 1Cv8.1CD -> C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c@2\build\ib\1Cv8.1CD
+14:31:49  Extracted: 1 files
+  [Pipeline] unstash
+  [Pipeline] }
+  [Pipeline] // stage
+  [Pipeline] stage
+  [Pipeline] { (Выполнение синтаксического контроля)
+  [Pipeline] timeout
+14:31:49  Timeout set to expire in 4 часа 0 минут
+  [Pipeline] {
+  [Pipeline] echo
+14:31:49  Running on node built-in
+  [Pipeline] withEnv
+  [Pipeline] {
+  [Pipeline] fileExists
+  [Pipeline] isUnix
+  [Pipeline] fileExists
+  [Pipeline] fileExists
+  [Pipeline] isUnix
+  [Pipeline] bat
+14:31:49  Extracted: 1 files
+  [Pipeline] unstash
+  [Pipeline] }
+  [Pipeline] // stage
+  [Pipeline] stage
+  [Pipeline] { (Загрузка расширений в конфигурацию)
+  [Pipeline] timeout
+14:31:49  Timeout set to expire in 1 час 0 минут
+  [Pipeline] {
+  [Pipeline] echo
+14:31:49  Running on node built-in
+  [Pipeline] isUnix
+  [Pipeline] fileExists
+  [Pipeline] echo
+14:31:49  Установим расширение YAXUNIT
+  [Pipeline] isUnix
+  [Pipeline] fileExists
+  [Pipeline] withEnv
+  [Pipeline] {
+  [Pipeline] fileExists
+  [Pipeline] withEnv
+  [Pipeline] {
+  [Pipeline] withEnv
+  [Pipeline] {
+  [Pipeline] isUnix
+  [Pipeline] bat
+  [Pipeline] isUnix
+  [Pipeline] bat
+14:31:49  
+14:31:49  C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c@2>chcp 65001   1>nul 
+14:31:49  
+14:31:49  C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c@2>vrunner.bat run --command "Путь=C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c@2\build\out\cfe\YAXUNIT.cfe;ЗавершитьРаботуСистемы;" --execute $runnerRoot/epf/ЗагрузитьРасширениеВРежимеПредприятия.epf --ibconnection "/F./build/ib" --settings ./tools/vrunner.json 
+14:31:49  
+14:31:49  C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c>chcp 65001   1>nul 
+14:31:49  
+14:31:49  C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c>vrunner.bat syntax-check --ibconnection "/F./build/ib" --groupbymetadata --allure-results2 build/out/allure/syntax-check --settings C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c\tools\vrunner.json --exception-file ./tools/syntax-check-exception-file.txt --mode -ThinClient -Server -ConfigLogIntegrity -HandlersExistence -ExtendedModulesCheck -ExternalConnection 
+14:31:50  vanessa-runner v2.6.1
+14:31:50  ИНФОРМАЦИЯ - Используется версия платформы 8.3.27.2130
+14:31:50  ИНФОРМАЦИЯ - Выполняю команду/действие в режиме 1С:Предприятие
+14:31:50  vanessa-runner v2.6.1
+14:31:50  ИНФОРМАЦИЯ - Используется версия платформы 8.3.27.2130
+14:31:50  ИНФОРМАЦИЯ - Начало проверки проекта
+14:31:50  ИНФОРМАЦИЯ - Выполняю синтакс-контроль конфигурации
+14:31:54  ОШИБКА - Получен ненулевой код возврата 101
+14:31:54  ИНФОРМАЦИЯ - Проверка проекта завершена за 4с
+14:31:54  ИНФОРМАЦИЯ - Результат синтакс-контроля: Ошибок не обнаружено
+14:31:54  ИНФОРМАЦИЯ - Генерация отчета Allure2
+  [Pipeline] }
+  [Pipeline] // withEnv
+  [Pipeline] stash
+14:31:54  Stashed 12 file(s)
+  [Pipeline] zip
+14:31:54  Compress C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c\build\out\allure\syntax-check to C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c\build\out\allure\syntax.zip
+14:31:54  Compressed 12 entries.
+14:31:54  Archiving C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c\build\out\allure\syntax.zip
+  [Pipeline] }
+  [Pipeline] // withEnv
+  [Pipeline] }
+  [Pipeline] // timeout
+  [Pipeline] }
+  [Pipeline] // stage
+  [Pipeline] }
+  [Pipeline] // withEnv
+  [Pipeline] }
+  [Pipeline] // node
+  [Pipeline] }
+  [Pipeline] // stage
+  [Pipeline] }
+14:31:57  ИНФОРМАЦИЯ - Дополнительный лог выполнения 1С:Предприятие
+14:31:57  
+14:31:57  Информация: Установлено расширение ВесТоваров, версия 
+14:31:57  Информация: Безопасный режим снят!
+14:31:57  Информация: Защита от опасных действий снята!
+14:31:57  Информация: Установлен режим использования основных ролей расширения!
+14:31:57  
+14:31:57  ИНФОРМАЦИЯ - Выполнение команды/действия в режиме 1С:Предприятие завершено.
+  [Pipeline] }
+  [Pipeline] // withEnv
+  [Pipeline] }
+  [Pipeline] // withEnv
+  [Pipeline] }
+  [Pipeline] // timeout
+  [Pipeline] }
+  [Pipeline] // stage
+  [Pipeline] stage
+  [Pipeline] { (Выполнение YAXUnit тестов)
+  [Pipeline] timeout
+14:31:57  Timeout set to expire in 4 часа 0 минут
+  [Pipeline] {
+  [Pipeline] echo
+14:31:57  Running on node built-in
+  [Pipeline] withEnv
+  [Pipeline] {
+  [Pipeline] fileExists
+  [Pipeline] }
+  [Pipeline] // withEnv
+  [Pipeline] isUnix
+  [Pipeline] fileExists
+  [Pipeline] fileExists
+  [Pipeline] fileExists
+  [Pipeline] withEnv
+  [Pipeline] {
+  [Pipeline] echo
+14:31:57  Очистка каталога результатов allure: C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c@2\build\out\allure
+  [Pipeline] dir
+14:31:57  Running in C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c@2\build\out\allure
+  [Pipeline] {
+  [Pipeline] deleteDir
+  [Pipeline] }
+  [Pipeline] // dir
+  [Pipeline] withEnv
+  [Pipeline] {
+  [Pipeline] isUnix
+  [Pipeline] bat
+14:31:57  
+14:31:57  C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c@2>chcp 65001   1>nul 
+14:31:57  
+14:31:57  C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c@2>vrunner.bat run --command RunUnitTests=C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c@2\tools\yaxunit_allure.json  --ibconnection "/F./build/ib" --settings ./tools/vrunner.json 
+14:31:58  vanessa-runner v2.6.1
+14:31:58  ИНФОРМАЦИЯ - Используется версия платформы 8.3.27.2130
+14:31:58  ИНФОРМАЦИЯ - Выполняю команду/действие в режиме 1С:Предприятие
+14:32:01  72a181c5-d5fd-49ff-ae07-58df54f58b1c
+14:32:01  ИНФОРМАЦИЯ - Дополнительный лог выполнения 1С:Предприятие
+14:32:01  
+14:32:01  Не хватает 5 единиц товара"Test_Хлеб" на складе"b8G7YHmдШeTЪPmжQЪЯfоЕoсJI".Максимальное количество: 5.
+14:32:01  
+14:32:01  ИНФОРМАЦИЯ - Выполнение команды/действия в режиме 1С:Предприятие завершено.
+  [Pipeline] }
+  [Pipeline] // withEnv
+  [Pipeline] fileExists
+  [Pipeline] stash
+14:32:02  Stashed 9 file(s)
+  [Pipeline] }
+  [Pipeline] // withEnv
+  [Pipeline] }
+  [Pipeline] // timeout
+  [Pipeline] }
+  [Pipeline] // stage
+  [Pipeline] }
+  [Pipeline] // withEnv
+  [Pipeline] }
+  [Pipeline] // node
+  [Pipeline] }
+  [Pipeline] // stage
+  [Pipeline] }
+  [Pipeline] // parallel
+  [Pipeline] }
+  [Pipeline] // stage
+  [Pipeline] stage
+  [Pipeline] { (SonarQube)
+  Stage "SonarQube" skipped due to when conditional
+  [Pipeline] getContext
+  [Pipeline] }
+  [Pipeline] // stage
+  [Pipeline] stage
+  [Pipeline] { (Declarative: Post Actions)
+  [Pipeline] node
+14:32:02  Running on Jenkins in C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c
+  [Pipeline] {
+  [Pipeline] echo
+14:32:02  Running on node built-in
+  [Pipeline] unstash
+  [Pipeline] unstash
+  [Pipeline] unstash
+  [Pipeline] allure
+14:32:02  [Allure] Using selected installation: allure
+14:32:02  [Allure] Using cached Allure CLI at C:\ProgramData\Jenkins\.jenkins\tools\org.allurereport.jenkins.tools.AllureCommandlineInstallation\allure
+14:32:02  Using Allure CLI 2.46.0 from installation 'allure'
+14:32:02  Using Allure CLI: C:\ProgramData\Jenkins\.jenkins\tools\org.allurereport.jenkins.tools.AllureCommandlineInstallation\allure\bin\allure.bat
+14:32:02  [ci_storage_1c] $ cmd.exe /C "C:\ProgramData\Jenkins\.jenkins\tools\org.allurereport.jenkins.tools.AllureCommandlineInstallation\allure\bin\allure.bat generate C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c\build\out\allure\syntax-check C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c\build\out\allure\yaxunit -c -o C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c\allure-report && exit %%ERRORLEVEL%%"
+14:32:05  Report successfully generated to C:\ProgramData\Jenkins\.jenkins\workspace\ci_storage_1c\allure-report
+14:32:05  Allure report was successfully generated.
+14:32:05  Archiving Allure report via ArtifactManager…
+14:32:05  Allure artifact archived via ArtifactManager.
+  [Pipeline] echo
+14:32:05  Running on node built-in
+  [Pipeline] echo
+14:32:05  Running on node built-in
+  [Pipeline] echo
+14:32:05  Email notifications are disabled
+  [Pipeline] echo
+14:32:05  Running on node built-in
+  [Pipeline] echo
+14:32:05  Telegram notifications are disabled
+  [Pipeline] }
+  [Pipeline] // node
+  [Pipeline] }
+  [Pipeline] // stage
+  [Pipeline] }
+  [Pipeline] // timestamps
+  [Pipeline] End of Pipeline
+  Finished: SUCCESS
