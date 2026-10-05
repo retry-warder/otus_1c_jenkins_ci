@@ -12,7 +12,11 @@ https://github.com/retry-warder/otus_1c_jenkins_ci (ветка `storage_1c`)
 - `jenkins-lib` — https://github.com/Kyrales/jenkins-lib.git, ветка `otus` (мультипайплайн `ci`, `Jenkinsfile_lib`);
 - `usher2` — https://github.com/Kyrales/vanessa-usher_mod.git, ветка `my_dev` (пайплайн `gitsync`, `Jenkinsfile_gitsync`).
 
-![Global Trusted Pipeline Libraries](doc/screens/01_libraries.png)
+![Global Trusted Pipeline Libraries — общий вид](doc/01_libraries_1.jpg)
+
+![jenkins-lib](doc/01_libraries_2.jpg)
+
+![usher2](doc/01_libraries_3.jpg)
 
 ## 3. Доработка в хранилище 1С
 
@@ -32,9 +36,9 @@ https://github.com/retry-warder/otus_1c_jenkins_ci (ветка `storage_1c`)
 Pipeline script from SCM → `Jenkinsfile_gitsync`, ветка `storage_1c`, библиотека `usher2`.
 Синхронизировал версию 2 хранилища (`Номер синхронизированной версии: 1` → `Номер последней версии в хранилище: 2`) и отправил коммит в GitHub. Результат: `Finished: SUCCESS`.
 
-![gitsync](doc/screens/02_gitsync.png)
+![gitsync](doc/02_gitsync.jpg)
 
-Лог: [doc/logs/gitsync_console.txt](doc/logs/gitsync_console.txt)
+Лог: [doc/gitsync_console.txt](doc/gitsync_console.txt)
 
 ## 5. Мультипайплайн ci
 
@@ -46,13 +50,13 @@ Multibranch Pipeline → `Jenkinsfile_lib`, библиотека `jenkins-lib`, 
 - модульные тесты YAXUnit;
 - публикация отчёта Allure.
 
-Результат: `Finished: SUCCESS`.
+Результат: `Finished: SUCCESS`, отчёт Allure — 100% тестов успешно.
 
-![ci](doc/screens/03_ci.png)
+![ci](doc/03_ci.jpg)
 
-![Allure](doc/screens/04_allure.png)
+![Allure](doc/04_allure.jpg)
 
-Лог: [doc/logs/ci_console.txt](doc/logs/ci_console.txt)
+Лог: [doc/ci_console.txt](doc/ci_console.txt)
 
 ## 6. Окружение
 
